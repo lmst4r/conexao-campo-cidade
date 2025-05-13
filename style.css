@@ -5,9 +5,9 @@
 }
 
 nav{
-    background-color: rgb(235, 171, 255);
+    background-color: #05039e;
     padding: 10px 20px;
-    position:relative;  
+    position: relative;
 }
 
 .menu-toggle {
@@ -21,4 +21,48 @@ nav{
     width: 30px;
     height: 25px;
     justify-content: space-between;
+}
+
+.hamburger span {
+    width: 4px;
+    background-color: #1b059b;* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    background-color: #ffffff;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    justify-content: space-between;
+}
+
+.hamburger span {
+    width: 4px;
+    background-color: #ff0909;
+    border-radius: 2px
+}
+
+ul.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+ul.menu li a {
+    color: #ff0000;
+    text-decoration: none;
 }
