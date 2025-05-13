@@ -1,68 +1,114 @@
+/* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav{
-    background-color: #05039e;
-    padding: 10px 20px;
-    position: relative;
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-.menu-toggle {
-    display: none;
+header {
+  background-color: #2e8b57;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
 }
 
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    width: 30px;
-    height: 25px;
-    justify-content: space-between;
+nav {
+  position: relative;
+  background-color: #2e8b57;
 }
 
-.hamburger span {
-    width: 4px;
-    background-color: #1b059b;* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-nav{
-    background-color: #ffffff;
-    padding: 10px 20px;
-    position: relative;
-}
-
-.menu-toggle {
-    display: none;
+nav input[type="checkbox"] {
+  display: none;
 }
 
 .hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background-color: #2e8b57;
+}
+
+.menu li {
+  margin: 0 15px;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: block;
+}
+
+.menu li a:hover {
+  background-color: #3cb371;
+}
+
+.intro {
+  text-align: center;
+  padding: 20px;
+}
+
+.intro img {
+  max-width: 100%;
+  height: auto;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.galeria img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+blockquote {
+  background-color: #e0ffe0;
+  border-left: 10px solid #2e8b57;
+  margin: 20px;
+  padding: 10px 20px;
+  font-style: italic;
+}
+
+footer {
+  background-color: #2e8b57;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
     display: none;
     flex-direction: column;
-    cursor: pointer;
-    width: 30px;
-    height: 25px;
-    justify-content: space-between;
-}
+  }
 
-.hamburger span {
-    width: 4px;
-    background-color: #ff0909;
-    border-radius: 2px
-}
-
-ul.menu {
-    list-style: none;
+  nav input[type="checkbox"]:checked ~ .menu {
     display: flex;
-    gap: 20px;
-}
-
-ul.menu li a {
-    color: #ff0000;
-    text-decoration: none;
+  }
 }
