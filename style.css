@@ -10,7 +10,7 @@ body{
     }
 
 nav {
-    background-color: rgba(184, 7, 184, 0.973);
+    background-color: rgba(0, 134, 72, 0.973);
     padding: 10px 20px;
     position: relative;
 }
@@ -30,7 +30,7 @@ nav {
 
 .hamburger span {
     height: 4px;
-    background-color: rgb(255, 214, 30);
+    background-color: rgb(233, 233, 233);
 }
 
 ul.menu {
@@ -40,7 +40,7 @@ ul.menu {
 }
 
 ul.menu li a {
-    color: rgb(255, 251, 2);
+    color: rgb(253, 253, 253);
     text-decoration: none;
 }
 
