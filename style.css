@@ -1,74 +1,114 @@
+/* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family:Arial,sans-serif;
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
 
-    }
+header {
+  background-color: #2e8b57;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
 
 nav {
-    background-color: rgba(0, 134, 72, 0.973);
-    padding: 10px 20px;
-    position: relative;
+  position: relative;
+  background-color: #2e8b57;
 }
 
-.menu-toggle {
-    display: none;
+nav input[type="checkbox"] {
+  display: none;
 }
 
 .hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background-color: #2e8b57;
+}
+
+.menu li {
+  margin: 0 15px;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: block;
+}
+
+.menu li a:hover {
+  background-color: #3cb371;
+}
+
+.intro {
+  text-align: center;
+  padding: 20px;
+}
+
+.intro img {
+  max-width: 100%;
+  height: auto;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.galeria img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+blockquote {
+  background-color: #e0ffe0;
+  border-left: 10px solid #2e8b57;
+  margin: 20px;
+  padding: 10px 20px;
+  font-style: italic;
+}
+
+footer {
+  background-color: #2e8b57;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
     display: none;
     flex-direction: column;
-    cursor: pointer;
-    width: 30px;
-    height: 25px;
-    justify-content: space-between;
-}
+  }
 
-.hamburger span {
-    height: 4px;
-    background-color: rgb(233, 233, 233);
-}
-
-ul.menu {
-    list-style: none;
+  nav input[type="checkbox"]:checked ~ .menu {
     display: flex;
-    gap: 20px;
-}
-
-ul.menu li a {
-    color: rgb(253, 253, 253);
-    text-decoration: none;
-}
-
-h1 {
-    align-items: center;
-    text-align: center;
-    color: aliceblue;
-
-}
-
-/*Responsivo*/
-@media (max-width:768px){
-.hamburger{
-    display: flex;
-    }
-ul.menu{
-    display:none;
-    flex-direction:column;
-background:#333;
-position:absolute;
-top:60px;
-left:0;
-width:100%;
-}
-
-.menu-toggle:checked
-+.hamburger + ul.menu{
-display: flex;
-}
-
+  }
 }
